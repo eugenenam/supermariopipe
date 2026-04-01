@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-		<script type="text/javascript" src="custom.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css"> 
-	</head>
+  <body>
 
-	<body>
-		<div id="mario"><img alt="its-a-me" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=12391907">
-		</div> 
-		<!-- Super Mario image -->
-		
-		<div id="pipe"><img id="pipe-pic" alt="down-the-drain" src="http://www.mariowiki.com/images/thumb/f/f0/Warp_Pipe_Artwork_-_Super_Mario_3D_World.png/140px-Warp_Pipe_Artwork_-_Super_Mario_3D_World.png"></div> 
+    <!-- CSS star dots injected here on night toggle -->
+    <div id="night-overlay"></div>
 
-		<!-- super pipe image -->
-	
-	</body>
+    <!-- HUD: day/night left, coins + combo right -->
+    <button id="day-night-btn" title="Toggle day / night">&#9790;</button>
+    <button id="music-btn" title="Toggle background music">&#9654;</button>
 
+    <div id="hud">
+      <span class="hud-label">COINS</span>
+      <span id="coin-count">0</span>
+      <span id="combo-display">x<span id="combo-count">2</span></span>
+    </div>
+
+    <!-- Sky clouds -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <!-- Super Star — spawns in sky on a timer -->
+    <div id="star"><img src="star.png" alt="super star"></div>
+
+    <!-- Ground enemies -->
+    <div id="goomba"><img src="goomba.png" alt="goomba"></div>
+    <div id="koopa"><img src="koopa.png" alt="koopa"></div>
+
+    <!-- Koopa shell (slides after stomp) -->
+    <div id="shell"><img src="shell.png" alt="shell"></div>
+
+    <!-- Yoshi easter egg — appears randomly -->
+    <div id="yoshi"><img src="yoshi.png" alt="Yoshi"></div>
+
+    <!-- Power-up mushroom — spawns on ground on a timer -->
+    <div id="mushroom"><img src="mushroom.png" alt="mushroom"></div>
+
+    <!-- Main scene: question block + Mario + pipe -->
+    <div id="scene">
+      <div id="question-block">?</div>
+      <div id="mario"><img alt="its-a-me" src="mario.png"></div>
+      <div id="pipe">
+        <img id="pipe-pic" alt="down-the-drain"
+             src="http://www.mariowiki.com/images/thumb/f/f0/Warp_Pipe_Artwork_-_Super_Mario_3D_World.png/140px-Warp_Pipe_Artwork_-_Super_Mario_3D_World.png">
+      </div>
+    </div>
+
+    <!-- Ground strip -->
+    <div id="ground"></div>
+
+  </body>
 </html>
