@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: linear-gradient(180deg, #5c94fc 0%, #87CEEB 60%, #87CEEB 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+#scene {
+  position: relative;
+  width: 200px;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+#broken-img {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  font-family: monospace;
+}
+#broken-img::after {
+  content: "\01F5BC";
+  font-size: 24px;
+  opacity: 0.4;
+}
+#pipe {
+  position: relative;
+  margin: 0 auto;
+}
+#pipe img {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+#ground {
+  width: 100%;
+  height: 50px;
+  background: #4CAF50;
+  position: relative;
+  z-index: 1;
+}
+#ground::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #8B4513;
+}
+</style>
+</head>
+<body>
+  <div id="scene">
+    <div id="broken-img"></div>
+    <div id="pipe">
+      <img src="pipe.png" alt="pipe">
+    </div>
+  </div>
+  <div id="ground"></div>
+</body>
+</html>
